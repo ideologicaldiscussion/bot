@@ -1,7 +1,7 @@
 module.exports = async (msg, commands, Discord) => {
 	if (msg.webhookID) return;
 
-	if (await require('./events/dBump')(msg)) return;
+	//if (await require('./events/dBump')(msg)) return;
 
 	if (msg.author.bot && msg.author.id != process.env.BOT_ID) return;
 
@@ -9,7 +9,7 @@ module.exports = async (msg, commands, Discord) => {
 
 	if (await require('./events/invite')(msg)) return;
 
-	if (await require('./events/grade')(msg)) return;
+	//if (await require('./events/grade')(msg)) return;
 
 	if (await require('./events/fellard')(msg)) return;
 
